@@ -40,6 +40,10 @@ Output:
     the zeroes removed.
     
 Program:
+<!DOCTYPE html>
+<html>
+<title>Web Page Design</title>
+<script>
 function removeElementsWithValue(arr, val) {
     var i = arr.length;
     while (i--) {
@@ -53,6 +57,10 @@ function removeElementsWithValue(arr, val) {
 var data = [0, 1, 2, 'stop', 2, 0, 1, 'stop'];
 removeElementsWithValue(data, 0);
 document.write(data);
+</script>
+<body>
+</body>
+</html>
 
 Output:
 1,2,stop,2,1,stop

@@ -69,4 +69,4 @@ File: “appingway-usecase-nas.7z”
     2. How do boys and girls perform across states?
     Answer: Please refer to the Use case 1- Question 2 folder in this repository for the solution.
     3. Do students from South Indian states really excel at Math and Science?
-    Answer: Please refer to the Use case 1- Question 2 folder in this repository for the solution.
+    Answer: Please refer to the Use case 1- Question 3 folder in this repository for the solution.

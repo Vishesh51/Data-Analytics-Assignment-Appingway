@@ -25,4 +25,6 @@ that the Father's Occupation influences the students performance the most in the
 - For the complete output of this code please check out this link:
 (https://user-images.githubusercontent.com/17992315/34031528-d35feb74-e197-11e7-9490-03e47d6bc63e.png)
 
+- Code: https://github.com/Vishesh51/Data-Analytics-Assignment-Appingway/blob/master/Use%20case%201%20-%20Question%201/part1-maths-father_occupation.py
+
 - All the codes with their output have been uploaded in this folder!

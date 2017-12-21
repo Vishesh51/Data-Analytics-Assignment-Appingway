@@ -8,6 +8,9 @@ Created on Wed Dec 13 17:22:37 2017
 
 import pandas as pd
 import math
+import numpy
+import scipy
+import matplotlib.pyplot as plt
 dataframe = pd.read_csv('nas-pupil-marks.csv')
 
 #dataframe['total %']=dataframe['Maths %']+dataframe['Reading %']+dataframe['Social %']+dataframe['Social %']
@@ -22,6 +25,16 @@ like the school or not, give math HW, help in studies,
 private tuition, Private tuition, Maths is difficult, Solve Maths, Solve Maths in groups,
 Draw geometry, Explain answers, Watch TV, Play games, Help in household
 '''
+
+df=dataframe.rename(columns={'Maths %':'Maths'})
+var = df.groupby("Father occupation").Maths.mean()
+fig = plt.figure()
+ax1 = fig.add_subplot(1,1,1)
+ax1.set_xlabel('Father occupation')
+ax1.set_ylabel('Maths')
+ax1.set_title("Father occupation wise Maths marks")
+var.plot(kind='bar')
+
 count_1=0
 marks_1=0.00
 count_2=0
@@ -72,7 +85,8 @@ for i in range(0, len(dataframe)):
             count_9=count_9+1
             marks_9=marks_9+dataframe.iloc[i]['Maths %']
         
-
+maxx=max((marks_1/count_1),(marks_2/count_2),(marks_3/count_3),(marks_4/count_4),(marks_5/count_5),(marks_6/count_6),(marks_7/count_7),(marks_8/count_8),(marks_9/count_9))
+minn=min((marks_1/count_1),(marks_2/count_2),(marks_3/count_3),(marks_4/count_4),(marks_5/count_5),(marks_6/count_6),(marks_7/count_7),(marks_8/count_8),(marks_9/count_9))
 
 print 'Average Percentage of Maths marks of Father occupation 0 (Not Applicable)- ',((marks_1/count_1))
 print 'Average Percentage of Maths marks of Father occupation 1 (Unemployed)- ',((marks_2/count_2))
@@ -83,4 +97,4 @@ print 'Average Percentage of Maths marks of Father occupation 5 (Skilled Worker)
 print 'Average Percentage of Maths marks of Father occupation 6 (Business)- ',((marks_7/count_7))
 print 'Average Percentage of Maths marks of Father occupation 7 (Teacher/Lecturer)- ',((marks_8/count_8))
 print 'Average Percentage of Maths marks of Father occupation 8 (Professional)- ',((marks_9/count_9))
-
+print 'Difference between the maximum and the minimum value is - ',((maxx-minn))
